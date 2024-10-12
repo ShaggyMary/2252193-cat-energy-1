@@ -88,18 +88,38 @@
   margin: 0;
   padding: 4px 0;
 
-  &--no-js {
-    display: none;
-  }
-
   @media (min-width: @tablet-width) {
-    display: none;
+    &--no-js {
+      display: none;
+    }
+
+    &--open {
+
+    }
+
+    &--close {
+      
+    }
   }
 }
 
 .main-nav__hamburger {
   @media (max-width: @mobile-width-only) {
-    //display: none;
+    &--no-js {
+      display: block;
+    }
+
+    &--open {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 66px;
+      left: 0;
+    }
+
+    &--close {
+      display: none;
+    }
   }
 }
 
