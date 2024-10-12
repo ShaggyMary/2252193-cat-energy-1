@@ -64,12 +64,33 @@
   }
 }
 
+.main-nav__logo-image {
+  &:hover {
+    opacity: 80%;
+  }
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.main-nav__logo-text {
+  &:hover {
+    opacity: 80%;
+  }
+  &:active {
+    opacity: 60%;
+  }
+}
+
 .main-nav__hamburger-button {
   width: 24px;
   height: 24px;
   margin: 0;
   padding: 4px 0;
-  display: none;
+
+  &--no-js {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -123,12 +144,35 @@
   line-height: 20px;
   text-transform: uppercase;
 
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -12px;
+        left: 0;
+        height: 2px;
+        background: #68b738;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
   }
 }
+
